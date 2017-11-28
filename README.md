@@ -1,3 +1,6 @@
+Taken from : https://github.com/onekiz/Exemplar
+Deployed: onekiz.github.io/Exemplar/
+
 # Exemplar
 Exemplar allows a user to research a topic by searching for academic papers and allowing a user to track the time spent reading on a particular topic.
 
