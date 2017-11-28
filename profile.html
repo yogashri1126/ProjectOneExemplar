@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>
+		Exemplar Profile
+	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<meta charset="utf-8">
+
+</head>
+
+<body>
+<div id="backgroundProfile">
+   <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Exemplar</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <form class="navbar-form navbar-left">
+              <!-- <div class="btn-group">
+                <a href="profile.html" class="btn btn-primary" role="button">Profile Page</a>
+              </div> -->
+              <div class="btn-group">
+                	<a href="profile.html" class="btn btn-new right" role="button" id = "displayName"></a>
+            	</div>
+          </form>
+
+            <form class="navbar-form navbar-right">
+              <!-- <div class="btn-group">
+                <a href="profile.html" class="btn btn-primary" role="button">Profile Page</a>
+              </div> -->
+             <div class="btn-group">
+                	<a href="main.html" class="btn btn-new" role="button">Main Page</a>
+            	</div>
+              <div class="btn-group">
+                <button type="button" id = "logOut" class="btn btn-new">LOG OUT</button>
+              </div>
+          </form>
+          
+
+         </div><!-- container -->
+        </nav>
+
+
+<div class = "container-fluid">
+<div class = "row-fluid">
+
+
+      <div class = "jumbotron" style = " padding: 0px; margin-left: 30%; margin-right:30%; background-color: AliceBlue; box-shadow: 10px 10px 5px #888888, inset 0 -3px 3px rgba(0,0,0,0.1); border-radius: 50px;">
+        <div class = "row">
+          <div class = "col-md-12">
+            <img id = "userImg" src="" style = "width: 70%; height: 200px; margin-top: 20px; margin:17%; border: 5px solid #9dffe3; border-radius: 100px; background-color: #8ab4c9;" alt="">
+            <h2 id = "userName" style = "text-align:center;"> name</h2>	
+            <p id = "profession" style = "text-align:center;"> Profession </p>
+            <p id = "country" style = "text-align:center;"> country </p>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+
+
+
+<div class="container">
+      <!-- navbar -->
+      <div class="row">
+
+        <div class = "col-md-6" style = "box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset -5px -5px 3px rgba(0,0,0,0.1); background-color: white;">
+          <div class="row" id="personal" style = "padding:10px;">
+                        <div class="btn-group">
+                            <button type="button"  style = "margin:5px;" class="btn btn-primary btnAboutMe">
+                              About Me
+                            </button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button"  style = "margin:5px;" class="btn btn-primary btnPaper">
+                              Papers
+                            </button>
+                        </div>
+
+                        <div class = "listPaper hide" id="paper" style = "margin: 10px; border-style: ridge; padding:5px;"> </div>
+                              <div id="aboutMe" style = "margin:10px; border-style: ridge; padding:5px; ">About Me</div>
+
+                            <button style = "margin:10px;" type="button" class="btn btn-primary btnEdit">
+                              Edit
+                            </button>
+                  </div>
+                  </div>
+
+                  <div class = "col-md-1"></div>
+        
+			
+
+        <div class = "col-md-5">
+
+                            <div id="profileChart" style = " padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset -5px  -5px 3px rgba(0,0,0,0.1);">
+                                    <h3 style = "margin: 5px;">Notes</h3>
+                                    <div id = "noteArea" style = "margin:10px; border-style: ridge; padding:7px;"></div>
+                                    <button style = "margin: 10px;" type="button" class="btn btn-primary btnEditNote" style = "margin-top:20px;">
+                                            Add
+                                    </button>
+                            </div>
+
+                            <br>
+
+                  <div id="profileChart" style = "box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset -5px  -5px 3px rgba(0,0,0,0.1);" >
+                          <label style = "margin: 5px;"> Time Spend on Article Read </label>
+                      <canvas id="myChart" style = "margin: 5px;" width="400" height="400"></canvas>
+                  </div>
+
+                            <br>
+
+                            <div id="profileChart" style = "box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset -5px  -5px 3px rgba(0,0,0,0.1);" >
+                      <label style = "margin: 5px;"> Number of Article Read </label>
+                      <canvas id="myChartnumArticle" style = "margin: 5px;" width="400" height="400"></canvas>
+              </div>
+        </div>
+
+        
+      </div>
+    </div><!-- container div -->
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<script src="./assets/js/moment.js" charset="utf-8"></script>
+    <script src="./assets/js/chart.bundle.min.js" charset="utf-8"></script>
+    <script src="./assets/js/app.js" charset="utf-8"></script>
+    <script src="./assets/js/chart.js" charset="utf-8"></script>
+    <script src="./assets/js/jquery-2.2.4.min.js" charset="utf-8"></script>
+    <script src="./assets/js/bootstrap.min.js" charset="utf-8"></script>
+
+	<script>
+
+
+
+
+////////event listenner whenever there is a change of Auth State signing in or signing up////////
+			firebase.auth().onAuthStateChanged(function(user){
+
+				if(user){
+				///////if user signed in or singed up updating user account properties///////
+				var storageRef = firebase.storage().ref(user.uid+"/");
+				storageRef.child(user.photoURL).getDownloadURL().then(function(url) {
+					$("#userImg").attr("src", url);
+				});
+				} else {
+					console.log("not logged in");
+				}
+			});
+
+			firebase.database().ref('/users').once('value', function (data) {
+				var user = firebase.auth().currentUser;
+				var html = "";
+				for (key in data.val()[user.uid]["papers"]) {
+						$("#paper").append("<h2>"+"'"+key+"'"+"</h2>");
+
+					for (index in data.val()[user.uid]["papers"][key]){
+						if (index!=="timeRead"){
+							html += "<li>" + data.val()[user.uid]["papers"][key][index]["paperTitle"] + ".  ---Time: " +data.val()[user.uid]["papers"][key][index]["timeRead"]+"sec" + "</li>";
+						}
+					}
+					$("#paper").append(html);
+					html="";
+				}
+
+				for (var j in data.val()[user.uid]["Notes"]){
+					var htmll = ("<li>" + data.val()[user.uid]["Notes"][j] + "</li>" + "<br>");
+					$("#noteArea").append(htmll);
+				}
+					console.log("yukarisi");
+
+				$("#userName").text(data.val()[user.uid]["displayName"]);
+				$("#profession").html("<h3>" + data.val()[user.uid]["profession"] + "</h3>");
+				$("#aboutMe").html("<h3>" + data.val()[user.uid]["aboutMe"] + "</h3>");
+				$("#country").html("<small>" + data.val()[user.uid]["country"] + "</small>");
+			});
+
+
+$(document).on('click', '#logOut', function () {
+  event.preventDefault();
+
+  firebase.auth().signOut().then(function () {
+              // Sign-out successful. Back to log in page
+    window.location = 'index.html';
+  }).catch(function (error) {
+              // Handling error
+    console.log(error);
+  });
+});
+
+
+
+$(document).on("click",".btnPaper", function(event){
+		event.preventDefault();
+		$("#paper").attr("class","show");
+		$("#aboutMe").attr("class","hide");
+});
+
+$(document).on("click",".btnAboutMe", function(event){
+		event.preventDefault();
+		$("#paper").attr("class","hide");
+		$("#aboutMe").attr("class","show");
+});
+
+$(document).on("click",".btnEdit", function(event){
+		event.preventDefault();
+		$(this).attr("class", "btn btn-primary btnSave");
+		$(this).text("Save");
+		$("#paper").attr("class","hide");
+		$("#aboutMe").attr("class","show");
+		$("#aboutMe").html("<textarea id = 'text'>");
+});
+
+
+$(document).on("click",".btnSave", function(event){
+		event.preventDefault();
+		var user = firebase.auth().currentUser;
+		firebase.database().ref('/users/'+ user.uid ).update({aboutMe: $("#text").val()});
+		$("#aboutMe").html("<h2>" + $("#text").val() + "</h2>");
+		$(this).attr("class", "btn btn-primary btnEdit");
+		$(this).text("Edit");
+});
+
+$(document).on("click",".btnEditNote", function(event){
+		event.preventDefault();
+		$(this).attr("class", "btn btn-primary btnSaveNote");
+		$(this).text("Save");
+		var text = $("<textarea id = 'textNote'>");
+		text.insertAfter($("#noteArea"));
+});
+
+
+
+$(document).on("click",".btnSaveNote", function(event){
+		event.preventDefault();
+		var user = firebase.auth().currentUser;
+		var count = 0;
+		firebase.database().ref('/users/'+user.uid+"/Notes").once('value', function (data) {
+
+			if (typeof(data.val())!=="string"){
+					for (var i in data.val()) {
+					    if (data.val().hasOwnProperty(i)) {
+					        count++;
+					    }
+					}
+			}
+			count++;
+			firebase.database().ref('/users/'+ user.uid +"/Notes").child(count).set($("#textNote").val());
+		});
+		var html = "<li>" +$("#textNote").val() + "</li>"+"<br>";
+		$("#noteArea").append(html);
+		$("#textNote").remove();
+		$(this).attr("class", "btn btn-primary btnEditNote");
+		$(this).text("Add");
+});
+
+	</script>
+</body>
+</html>

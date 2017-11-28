@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplar</title>
+
+    <!-- materialize link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+     <script src="https://apis.google.com/js/api.js"></script><!--**********-->
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+
+  </head>
+  <body>
+  <div id="backgroundMain">
+    <!-- navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Exemplar</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button id="newButton"  type="submit" class="btn btn-new">Search</button>
+          </form>
+
+            <form class="navbar-form navbar-right">
+              <!-- <div class="btn-group">
+                <a href="profile.html" class="btn btn-primary" role="button">Profile Page</a>
+              </div> -->
+              <div class="btn-group">
+                	<a href="profile.html" class="btn btn-new right" role="button" id = "displayName"></a>
+            	</div>
+              <div class="btn-group">
+                <button type="button" id = "logout" class="btn btn-new dropdown-toggle logout">LOG OUT</button>
+              </div>
+          </form>
+          </div>
+
+         </div><!-- container -->
+
+        </nav>
+     
+
+    <div class="container-fluid">
+      <!-- navbar -->
+      <div class="row">
+
+        <div id='article-list' class="col-md-3">
+          <h4 class='text-center'>Table of Contents</h4>
+        </div>
+        <!-- <div id="dateAdded-input" class="col-md-6"> -->
+          <!--this can be removed just testing-->
+        <div class="col-md-5">
+          <h4 >Current Article</h4>
+          <p id="article-current"></p>
+          <!--below p adds iframe-->
+          <h4>Topic Video</h4>
+          <p id="ytNew"></p>
+        </div>
+        <!--</div>
+
+        <form>
+        <div class="form-group">
+              <label for="comment-input">Search for Videos Related to Your Subject or Author</label>
+                <textarea class="form-control" id="subject-input" rows="1"></textarea>
+            <button id="newButton" class="btn btn-default">Submit</button>
+          </div>
+        </form>
+
+        <div id="player"></div>
+
+        </div>-->
+
+
+        <div id='notes' class="col-md-4">
+            <label> Time Spend on Article Read </label>
+            <canvas id="myChart" style = "box-shadow: 0 3px 6px rgba(0,0,0,0.3), inset 0 -3px 3px rgba(0,0,0,0.1); background-color: white;" width="400" height="400"></canvas>
+
+            <br> <br>
+            <label> Number of Article Read </label>
+            <canvas id="myChartnumArticle" style = "box-shadow: 0 3px 6px rgba(0,0,0,0.3), inset 0 -3px 3px rgba(0,0,0,0.1); background-color: white" width="400" height="400"></canvas>
+        <div>
+          <ol id="artRed"></ol>
+        </div>
+        </div>
+
+        
+
+      </div>
+    </div><!-- container div -->
+
+
+    <div class="container-fluid">
+    <div id="wrapper" class = "hide">
+
+         <div id="display">00:00</div>
+
+         <!-- Div containing our stopwatch controls -->
+        <div class="btn-group" id="buttons">
+          <button id="stop" type="button" class="btn btn-danger btn-lg btn-block">Stop</button>
+        </div>
+
+       </div>
+    </div>
+   </div>
+
+</div>
+    <script src="./assets/js/jquery-2.2.4.min.js" charset="utf-8"></script>
+    <script src="./assets/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="./assets/js/moment.js" charset="utf-8"></script>
+    <script src="./assets/js/chart.bundle.min.js" charset="utf-8"></script>
+    <script src="./assets/js/app.js" charset="utf-8"></script>
+    <script src="./assets/js/chart.js" charset="utf-8"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+  </body>
+</html>
